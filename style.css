@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
 
 * {
     margin: 0;
@@ -9,7 +11,7 @@ body {
     font-size: 16px;
     box-sizing: border-box;
     height: 100rem;
-    background-color: #111E3E
+    background-color: #111E3E;
 
 }
 
@@ -103,15 +105,85 @@ button {
 }
 
 .feed_background {
-    position: fixed;
+    display: flex;
+    justify-content: center;
+    position: absolute;
     height: 100vh;
     width: 40rem;
-    top: 5.2rem;
+    top: 3rem;
     border-width: 0;
-    border-radius: 2rem;
-    background-color: #222E50;
-    ;
+    background-color: #111E3E;
+}
 
+.post {
+    background-color: #222E50;
+    height: 20vh;
+    width: 38vw;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    border-radius: 2rem;
+}
+
+.post_content {
+    position: absolute;
+    background-color: #222E50;
+    height: 6rem;
+    width: 30vw;
+    left: 6rem;
+    top: 4rem;
+    font-size: 15px;
+}
+
+#data {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: #71767b;
+    font-size: 15px;
+}
+
+#separador {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #71767b;
+    font-size: 15px;
+}
+
+#profile_name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.profile_name {
+    position: absolute;
+    left: 6rem;
+    top: 2rem;
+    font-size: 15px;
+}
+
+.profile_pic {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 1rem;
+    left: 2rem;
+}
+
+.profile_pic_image {
+    border-radius: 50%;
+}
+
+.comment_balloon {
+    position: absolute;
+    background-color: #222E50;
+    left: 6rem;
+    top: 10rem;
+}
+
+.comment_balloon_button {
+    background-color: #222E50;
+    border: 0;
 
 }
 
