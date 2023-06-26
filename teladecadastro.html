@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="teladecadastro.css">
     <title>Cadastro</title>
 </head>
 <body>
@@ -30,6 +30,30 @@
     <main class="cadastro">
         <img src="imagemcjrsite.png" alt="Imagem da CJR">
         <div class="cadastro_caixa">
+            <div class="imagem_circulo_usuario_cadastro">
+                <img src="circulo_usuario_cadastro.png" alt="circulo_usuario_cadastro" />
+            </div>
+            <form>
+                <div class="input_nome">
+                    <input type="text" name="nome" value="" placeholder="Nome" id="txt_nome"/>
+                </div>
+                <div class="select_genero">
+                    <select id="select_genero" name="genero">
+                        <option selected disabled value="">Gênero</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminimo">Feminino</option>
+                    </select>
+                </div>
+                <div class="input_cargo">
+                    <input type="text" name="cargo" value="" placeholder="Cargo" id="txt_cargo"/>
+                </div>
+                <div class="input_email">
+                    <input type="email" name="email" value="" placeholder="Email" id="txt_email"/>
+                </div>
+                <div class="input_senha">
+                    <input type="password" name="senha" value="" placeholder="Senha" id="txt_senha"/>
+                </div>
+            </form>
        </div>
         
     </main>   

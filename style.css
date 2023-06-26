@@ -118,7 +118,7 @@ button {
 .post {
     background-color: #222E50;
     height: 20vh;
-    width: 38vw;
+    width: 40.5rem;
     color: white;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
@@ -129,7 +129,7 @@ button {
     position: absolute;
     background-color: #222E50;
     height: 6rem;
-    width: 30vw;
+    width: 30rem;
     left: 6rem;
     top: 4rem;
     font-size: 15px;
