@@ -114,12 +114,21 @@ button {
     border: 0;
 }
 
+#txt_nome::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #111E3E;
+    opacity: 0.6;
+}
+
 .select_genero {
     padding: 1rem;
 }
 
 #select_genero {
-    width: 30.25rem;
+    width: 31rem;
+    height: 3rem;
+    border-radius: 0.5rem;
 }
 
 .input_cargo {
@@ -129,6 +138,16 @@ button {
 
 #txt_cargo {
     width: 30rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: 0;
+}
+
+#txt_cargo::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #111E3E;
+    opacity: 0.6;
 }
 
 .input_email {
@@ -138,6 +157,16 @@ button {
 
 #txt_email {
     width: 30rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: 0;
+}
+
+#txt_email::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #111E3E;
+    opacity: 0.6;
 }
 
 .input_senha {
@@ -147,4 +176,24 @@ button {
 
 #txt_senha {
     width: 30rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: 0;
+}
+
+#txt_senha::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #111E3E;
+    opacity: 0.6;
+}
+
+input {
+    padding-left: 1rem;
+}
+
+select {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    padding-left: 0.5rem;
 }
