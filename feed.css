@@ -115,6 +115,78 @@ button {
     background-color: #111E3E;
 }
 
+.post {
+    background-color: #222E50;
+    height: 12rem;
+    width: 40.5rem;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    border-radius: 2rem;
+}
+
+.post_content {
+    position: absolute;
+    background-color: #222E50;
+    height: 6rem;
+    width: 30rem;
+    left: 6rem;
+    top: 4rem;
+    font-size: 15px;
+}
+
+#data {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: #71767b;
+    font-size: 15px;
+}
+
+#separador {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #71767b;
+    font-size: 15px;
+}
+
+#profile_name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.profile_name {
+    position: absolute;
+    left: 6rem;
+    top: 2rem;
+    font-size: 15px;
+}
+
+.profile_pic {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 1rem;
+    left: 2rem;
+}
+
+.profile_pic_image {
+    border-radius: 50%;
+}
+
+.comment_balloon {
+    position: absolute;
+    background-color: #222E50;
+    left: 6rem;
+    top: 10rem;
+}
+
+.comment_balloon_button {
+    background-color: #222E50;
+    border: 0;
+
+}
+
 .feed_rodape_comentar {
     display: flex;
     justify-content: center;
