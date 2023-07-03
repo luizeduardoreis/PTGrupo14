@@ -94,7 +94,7 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 43rem;
+    height: 50rem;
     width: 35rem;
     background-color: #222E50;
 }
@@ -186,6 +186,52 @@ button {
     font-weight: 700;
     color: #111E3E;
     opacity: 0.6;
+}
+
+.tem_cadastro {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+#label_tem_cadastro {
+    font-family: 'Inter', 'sans-serif';
+    font-weight: 700;
+    color: aliceblue;
+}
+
+#faca_login_link:link {
+    color: #8bc34a;
+    text-decoration: none;
+}
+
+#faca_login_link:hover {
+    color: #8bc34a;
+}
+
+#faca_login_link:visited {
+    color: #8bc34a;
+}
+
+.cadastrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30rem;
+    height: 3rem;
+    padding: 1rem;
+}
+
+#botao_cadastrar {
+    width: 10rem;
+    height: 2rem;
+    font-family: 'Inter', 'sans-serif';
+    font-weight: 700;
+    color: #111E3E;
+    border: 0;
+    border-radius: 0.6rem;
 }
 
 input {
