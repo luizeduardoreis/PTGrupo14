@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    box-sizing: border-box;
+    height: 100rem;
+    background-color: #111E3E;
+    overflow: hidden; /* tira o scroll da div */
+}
+main{
+    overflow: auto; /* deixa o scroll na div */  
+}
+
+/* navbar */
+.navbar {
+    position: relative;
+    background-color: #8bc34a;
+    height: 4.5rem;
+    width: 100vw;
+}
+
+.nome_perfil_nav{
+    position: absolute;
+    height: 2.5rem;
+    width: 5.75rem;
+    right: 12.5rem;
+    top: 1rem;
+
+}
+
+.botao_nome_perfil_nav{
+    background-color: #8bc34a;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    border-width: 0;
+    height: 2.5rem;
+    border-radius: 1rem;
+    width: 5.75rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.foto_perfil_nav{
+    position: absolute;
+    right: 3.25rem;
+    top: 0.19rem;
+    border-radius: 50%;
+}
+.logout {
+    position: absolute;
+    background-color: #8bc34a;
+    right: 1.5rem;
+    top: 0.55rem;
+}
+
+.botao_logout {
+    background-color: #8bc34a;
+    border-width: 0;
+}
+
+.logo {
+    position: absolute;
+    left: 2.5rem;
+    top: 0.75rem;
+    height: 2.75rem;
+    width: 8rem;
+}
+
+
+.botao_logo {
+    height: 2.75rem;
+    width: 8rem;
+    border: 0;
+    border-radius: 1rem;
+    background-color: #d9d9d9;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* feed */
+.feed {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+.feed_area {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 100rem;
+    width: 40.5rem;  
+    border-width: 0px 1px;
+    border-style: solid;
+    border-color: #7E7E7E;
+
+}
+
+.feed_background {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    height: 100rem;
+    width: 40rem;
+    top: 14rem;
+    border-width: 0;
+    background-color: #111E3E;
+    border-width: 1px 0px;
+    border-style: solid;
+    border-color: #7E7E7E;
+}
+
+.publicacoes{
+    position: absolute;
+    height: 1rem;
+    left: 0.75rem;
+    top:0.75rem;
+}
+
+#publicacoes_txt{
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 17px;
+        color: white;
+}
+
+.post {
+    background-color: #222E50;
+    position: relative;
+    height: 12rem;
+    width: 40.5rem;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    border-radius: 2rem;
+    top: 3.5rem;
+}
+
+.post_content {
+    position: absolute;
+    background-color: #222E50;
+    height: 6rem;
+    width: 30rem;
+    left: 6rem;
+    top: 4rem;
+    font-size: 15px;
+}
+
+#data {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: #71767b;
+    font-size: 15px;
+}
+
+#separador {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #71767b;
+    font-size: 15px;
+}
+
+#profile_name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.profile_name {
+    position: absolute;
+    left: 6rem;
+    top: 2rem;
+    font-size: 15px;
+}
+
+.profile_pic {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 1rem;
+    left: 2rem;
+}
+
+.profile_pic_image {
+    border-radius: 50%;
+}
+
+.comment_balloon {
+    position: absolute;
+    background-color: #222E50;
+    left: 6rem;
+    top: 10rem;
+}
+
+.comment_balloon_button {
+    background-color: #222E50;
+    border: 0;
+
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+
+}
+
+.banner_area{
+    background-color: #222E50;
+    height: 10rem;
+    width: 40.6rem;
+}
+
+.editar_perfil {
+    height: 2.5rem;
+    width: 10rem;
+    position: absolute;
+    background-color: #111E3E;
+    right: 1.5rem;
+    top: 1rem;
+    
+}
+
+.botao_editar_perfil {
+    background-color: #111E3E;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0px 3px 4px RGBA(0,0,0,.60) ; /* 3 valor = blur // .60 = porcentagem de uso da cor */
+    height: 3rem;
+    border-radius: 1rem;
+    width: 9.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.foto_perfil{
+    position: absolute;
+    left: 4rem;
+    top: -4.75rem;
+
+}
+
+.foto_perfil_grande{
+    border-radius: 50%;
+}
+
+/* up feed*/
+.up_feed{
+    width: 40.5rem;
+    height: 15rem;
+}
+
+.bio{
+    position: absolute;
+    width: 90%;
+    height: 6rem;
+    top: 6rem;
+    left: 4rem;
+}
+
+.funcao_bio{
+    position: absolute;
+    top: 2.4rem;
+}
+
+#nome_perfil {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+}
+
+.email_bio{
+    position: absolute;
+    top: 4.8rem;
+}
+
+#funcao{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+    margin-left: 0.5rem;
+}
+
+#email{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+    margin-left: 0.25rem;
+}
