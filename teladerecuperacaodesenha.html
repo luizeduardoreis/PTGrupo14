@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="teladerecuperacaodesenha.css">
     <title>Recuperacao de Senha</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
                 <button class="botao_entrar">Entrar</button>
             </a>
         </div>
-        <div class="logo">
+        <div class="logo">  
             <a href="feed.html">
                 <button class="botao_logo">
                     <img src="cjr.png" alt="logo_cjr">
@@ -30,8 +31,26 @@
     <main class="recuperacao">
         <img src="imagemcjrsite.png" alt="Imagem da CJR">
         <div class="recuperacao_caixa">
-       </div>
-    
+            <div class="texto_recuperacao">
+                Bem vindo de volta (usuario)! <br>Digite sua nova senha.
+            </div>
+            <div class="input_nova_senha">
+                Senha nova<br><br>   
+                <input type="password" name="novasenha" value="" placeholder="" id="txt_novasenha">
+            </div>
+            <div class="input_nova_senha_novamente">
+                Digite novamente a senha<br><br>
+                <input type="password" name="novasenha" value="" placeholder="" id="txt_novasenha">
+            </div> 
+            <div class="tem_cadastro">
+                <label for="tem_cadastro" id="label_tem_cadastro">
+                    Possui conta? <a href="teladelogin.html" id="faca_login_link">Acesse aqui</a>
+                </label>
+            </div>
+            <div class="cadastrar">
+                <button id="botao_cadastrar">Cadastrar</button>
+            </div>
+        </div>
     </main>
 </body>
 </html>
