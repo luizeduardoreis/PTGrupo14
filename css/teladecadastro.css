@@ -1,0 +1,160 @@
+﻿.cadastro {
+    display: flex;
+    align-items: center;
+    padding: 10% 0%;
+}
+
+.cadastro_caixa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50rem;
+    width: 35rem;
+    background-color: #222E50;
+}
+
+.imagem_circulo_usuario_cadastro {
+    padding-bottom: 2rem;
+}
+
+.input_nome {
+    padding: 1rem;
+}
+
+#txt_nome {
+    width: 30rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: 0;
+}
+
+#txt_nome::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #111E3E;
+    opacity: 0.6;
+}
+
+.select_genero {
+    padding: 1rem;
+}
+
+#select_genero {
+    width: 31rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+}
+
+.input_cargo {
+    padding: 1rem;
+}
+
+
+#txt_cargo {
+    width: 30rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: 0;
+}
+
+#txt_cargo::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #111E3E;
+    opacity: 0.6;
+}
+
+.input_email {
+    padding: 1rem;
+}
+
+
+#txt_email {
+    width: 30rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: 0;
+}
+
+#txt_email::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #111E3E;
+    opacity: 0.6;
+}
+
+.input_senha {
+    padding: 1rem;
+}
+
+
+#txt_senha {
+    width: 30rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: 0;
+}
+
+#txt_senha::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #111E3E;
+    opacity: 0.6;
+}
+
+.tem_cadastro {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+#label_tem_cadastro {
+    font-family: 'Inter', 'sans-serif';
+    font-weight: 700;
+    color: aliceblue;
+}
+
+#faca_login_link:link {
+    color: #8bc34a;
+    text-decoration: none;
+}
+
+#faca_login_link:hover {
+    color: #8bc34a;
+}
+
+#faca_login_link:visited {
+    color: #8bc34a;
+}
+
+.cadastrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30rem;
+    height: 3rem;
+    padding: 1rem;
+}
+
+#botao_cadastrar {
+    width: 10rem;
+    height: 2rem;
+    font-family: 'Inter', 'sans-serif';
+    font-weight: 700;
+    color: #111E3E;
+    border: 0;
+    border-radius: 0.6rem;
+}
+
+input {
+    padding-left: 1rem;
+}
+
+select {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    padding-left: 0.5rem;
+}

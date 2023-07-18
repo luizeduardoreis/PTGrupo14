@@ -1,0 +1,66 @@
+.feed {
+    display: flex;
+    justify-content: center;
+}
+
+.feed_area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 40.5rem;
+    top: 5.2rem;  
+    border-width: 0px 1px;
+    border-style: solid;
+    border-color: #7E7E7E;
+    ;
+}
+
+.post_aberto {
+    background-color: #222E50;
+    height: 40rem;
+    width: 40rem;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    border-radius: 2rem;
+    padding: 0.2rem;
+}
+
+.feed_rodape_comentar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: #19192D;
+    bottom: 0rem;
+    width: 40rem;
+    height: 6rem;
+
+}
+
+.comentar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    position: fixed;
+    height: 3rem;
+    width: 10rem;
+
+}
+
+.botao_comentar {
+    background-color: #d9d9d9;
+    height: 3rem;
+    width: 10rem;
+    border: 0;
+    border-radius: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1rem;
+
+}
+
