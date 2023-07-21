@@ -1,3 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #111E3E;
+
+}
+
+.navbar {
+    position: fixed;
+    background-color: #8bc34a;
+    height: 4.5rem;
+    width: 100vw;
+}
+
+.entrar {
+    height: 2.5rem;
+    width: 5.75rem;
+    position: absolute;
+    background-color: #8bc34a;
+    right: 2.5rem;
+    top: 1rem;
+}
+
+.botao_entrar {
+    background-color: #222e50;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    border-width: 0;
+    height: 2.5rem;
+    border-radius: 1rem;
+    width: 5.75rem;
+    font-size: 1rem;
+}
+
+.logo {
+    position: absolute;
+    left: 2.5rem;
+    top: 0.75rem;
+    height: 2.75rem;
+    width: 8rem;
+}
+
+
+.botao_logo {
+    height: 2.75rem;
+    width: 8rem;
+    border: 0;
+    border-radius: 1rem;
+    background-color: #d9d9d9;
+}
+
+.criar_conta {
+    position: absolute;
+    height: 2.5rem;
+    width: 5.75rem;
+    right: 10rem;
+    top: 1rem;
+
+}
+
+.botao_criar_conta {
+    background-color: #8bc34a;
+    color: #222e50;
+    font-family: 'Inter', sans-serif;
+    border-width: 0;
+    height: 2.5rem;
+    border-radius: 1rem;
+    width: 5.75rem;
+    font-size: 1rem;
+}
+
+button {
+    cursor: pointer;
+}
+
 .feed {
     display: flex;
     justify-content: center;
@@ -6,7 +91,8 @@
 .feed_area {
     display: flex;
     justify-content: center;
-    height: 100%;
+    position: fixed;
+    height: 100vh;
     width: 40.5rem;
     top: 5.2rem;  
     border-width: 0px 1px;
@@ -14,8 +100,16 @@
     border-color: #7E7E7E;
 }
 
-.post_aberto {
+.feed_background {
+    position: absolute;
+    height: 100vh;
+    width: 40rem;
+    top: 3rem;
+    border-width: 0;
+    background-color: #111E3E;
+}
 
+.post_aberto {
     background-color: #222E50;
     width: 39.5rem;
     color: white;
@@ -37,7 +131,7 @@
 .comments{
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    height: 54vh;
+    height: 63vh;
     overflow-y: scroll;
 }
 
@@ -64,7 +158,7 @@
     background-color: #19192D;
     bottom: 0rem;
     width: 40rem;
-    height: 6rem
+    height: 10vh;
 }
 
 .comentar {
@@ -96,8 +190,8 @@
     position: relative;
     width: 48px;
     height: 48px;
-    top: 1rem;
-    left: 1rem;
+    top: 25%;
+    left: 2.5%;
 }
 
 .profile_pic_image{
@@ -107,7 +201,9 @@
 .profile{
     display: flex;
     height: 3.5rem;
+    width: 100%;
 }
+
 #data {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
@@ -130,9 +226,9 @@
 
 .profile_name {
     position: relative;
-    left: 2rem;
-    top: 1.8rem;
-    width: 8rem;
+    left: 5%;
+    top: 50%;
+    width: 16rem;
     height: 1.5rem;
     font-size: 15px;
 }
