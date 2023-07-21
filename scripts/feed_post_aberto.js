@@ -58,3 +58,25 @@ const renderComments = () => {
 }
 
 renderComments()
+
+const openButton = document.querySelector('.botao_comentar');
+const modal = document.querySelector('.criar_comentario');
+const closeButton = document.querySelector('.botao_fechar_modal');
+
+openButton.addEventListener('click', () => {
+    modal.showModal();
+});
+
+closeButton.addEventListener('click', () => {
+    modal.close();
+});
+
+function updateCharCount() {
+    const textarea = document.getElementById('comment_text');
+    const charCountSpan = document.getElementById('char-count');
+    const maxChars = 250;
+    const remainingChars = maxChars - textarea.value.length;
+    
+    charCountSpan.textContent = `${remainingChars} ${remainingChars === 1 ? 'character' : 'characters'} left`;
+}
+

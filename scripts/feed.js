@@ -16,6 +16,30 @@ const mockedposts = [
         title: 'Post 3',
         content: 'Sou o João!',
         author: 'João'
+    },
+    {
+        id: 3,
+        title: 'Post 3',
+        content: 'Sou o João!',
+        author: 'João'
+    },
+    {
+        id: 3,
+        title: 'Post 3',
+        content: 'Sou o João!',
+        author: 'João'
+    },
+    {
+        id: 3,
+        title: 'Post 3',
+        content: 'Sou o João!',
+        author: 'João'
+    },
+    {
+        id: 3,
+        title: 'Post 3',
+        content: 'Sou o João!',
+        author: 'João'
     }
 ]
 
