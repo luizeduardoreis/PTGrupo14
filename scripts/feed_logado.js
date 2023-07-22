@@ -75,7 +75,6 @@ const renderPosts = () => {
 }
 
 renderPosts()
-
 // ... (previous code)
 
 // Instead of selecting only the first comment_balloon_button, select all of them

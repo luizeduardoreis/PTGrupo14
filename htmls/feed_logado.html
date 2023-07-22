@@ -35,7 +35,25 @@
     <main class="feed">
         <div class="feed_area">
             <div class="feed_background">
-                <script src="/scripts/feed.js"></script>
+                <dialog class="criar_comentario">
+                    <div class="caixa_de_texto_novo_comentario">
+                        <div class="options">
+                            <button class="botao_dialog" id="add_imagem">
+                                <img src="/imagens/Vector.png" alt="logo_cjr">
+                            </button>
+                            <button class="botao_dialog" id="negrito">
+                                <img src="/imagens/bold.png" alt="logo_cjr">
+                            </button>
+                            <button class="botao_dialog" id="italico">
+                                <img src="/imagens/italic.png" alt="logo_cjr">
+                            </button>
+                        </div>
+                        <textarea id="comment_text" maxlength="250" placeholder="Escreva seu comentário..."></textarea>
+                    </div>
+                    <button class="botao_publicar_modal">Publicar</button>
+                    <button class="botao_fechar_modal">Voltar</button>
+                </dialog>
+                <script src="/scripts/feed_logado.js"></script>
                 <button class="botao_criar_pub"></button>
             </div>
         </div>
