@@ -202,22 +202,45 @@ button {
     background-color: #111E3E;
     position: relative;
     left: 10%;
-    top: 10%;
-    height: 80%;
+    top: 12.5%;
+    height: 70%;
     width: 80%;
     border-radius: 2rem;
     color: white;
+}
+
+.botao_fechar_modal {
+    position: relative;
+    top: 20%;
+    left: 75%;
+    background-color: #222E50;
+    border: 0;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.botao_publicar_modal {
+    position: relative;
+    top: 20%;
+    left: 7.5%;
+    background-color: #222E50;
+    border: 0;
+    color: #8bc34a;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
 }
 
 #comment_text {
     padding: 5%;
     position: relative;
     border-radius: 2rem;
-    top: 30%;
     background-color: #111E3E;
     color: white;
     width: 90%;
-    height: 60%;
+    height: 85%;
     border: 0;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
