@@ -17,30 +17,7 @@ const mockedposts = [
         content: 'Sou o João!',
         author: 'João'
     },
-    {
-        id: 3,
-        title: 'Post 3',
-        content: 'Sou o João!',
-        author: 'João'
-    },
-    {
-        id: 3,
-        title: 'Post 3',
-        content: 'Sou o João!',
-        author: 'João'
-    },
-    {
-        id: 3,
-        title: 'Post 3',
-        content: 'Sou o João!',
-        author: 'João'
-    },
-    {
-        id: 3,
-        title: 'Post 3',
-        content: 'Sou o João!',
-        author: 'João'
-    }
+   
 ]
 
 const renderPosts = () => {
@@ -76,21 +53,23 @@ const renderPosts = () => {
 
 renderPosts()
 
-// ... (previous code)
-
-// Instead of selecting only the first comment_balloon_button, select all of them
-const commentBalloonButtons = document.querySelectorAll('.comment_balloon_button');
-const modal = document.querySelector('.criar_comentario');
+const openButton = document.querySelector('.botao_cria_post');
+const modal = document.querySelector('.post_box');
 const closeButton = document.querySelector('.botao_fechar_modal');
 
-// Add event listener to each comment_balloon_button
-commentBalloonButtons.forEach(openButton => {
-    openButton.addEventListener('click', () => {
-        modal.showModal();
-    });
+openButton.addEventListener('click', () => {
+    modal.showModal();
 });
 
-// Add event listener to the closeButton to close the modal
 closeButton.addEventListener('click', () => {
     modal.close();
 });
+
+function updateCharCount() {
+    const textarea = document.getElementById('comment_text');
+    const charCountSpan = document.getElementById('char-count');
+    const maxChars = 250;
+    const remainingChars = maxChars - textarea.value.length;
+    
+    charCountSpan.textContent = `${remainingChars} ${remainingChars === 1 ? 'character' : 'characters'} left`;
+}
