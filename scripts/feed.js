@@ -17,30 +17,7 @@ const mockedposts = [
         content: 'Sou o João!',
         author: 'João'
     },
-    {
-        id: 3,
-        title: 'Post 3',
-        content: 'Sou o João!',
-        author: 'João'
-    },
-    {
-        id: 3,
-        title: 'Post 3',
-        content: 'Sou o João!',
-        author: 'João'
-    },
-    {
-        id: 3,
-        title: 'Post 3',
-        content: 'Sou o João!',
-        author: 'João'
-    },
-    {
-        id: 3,
-        title: 'Post 3',
-        content: 'Sou o João!',
-        author: 'João'
-    }
+   
 ]
 
 const renderPosts = () => {
@@ -75,3 +52,24 @@ const renderPosts = () => {
 }
 
 renderPosts()
+
+const openButton = document.querySelector('.botao_cria_post');
+const modal = document.querySelector('.post_box');
+const closeButton = document.querySelector('.botao_fechar_modal');
+
+openButton.addEventListener('click', () => {
+    modal.showModal();
+});
+
+closeButton.addEventListener('click', () => {
+    modal.close();
+});
+
+function updateCharCount() {
+    const textarea = document.getElementById('comment_text');
+    const charCountSpan = document.getElementById('char-count');
+    const maxChars = 250;
+    const remainingChars = maxChars - textarea.value.length;
+    
+    charCountSpan.textContent = `${remainingChars} ${remainingChars === 1 ? 'character' : 'characters'} left`;
+}

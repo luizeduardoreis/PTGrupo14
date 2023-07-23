@@ -99,6 +99,7 @@ button {
     border-width: 0px 1px;
     border-style: solid;
     border-color: #7E7E7E;
+    
 }
 
 .feed_background {
@@ -109,6 +110,81 @@ button {
     width: 40rem;
     border-width: 0;
     background-color: #111E3E;
+    top: 3.5rem;
+}
+
+.botao_cria_post {
+    background-color: #8bc34a;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    border-width: 0;
+    height: 2.5rem;
+    border-radius: 1rem;
+    width: 6.75rem;
+    font-size: 1rem;
+    left: 1rem;
+    top: 0.5rem;
+    position: absolute;
+}
+
+.post_box {
+    background-color: #222E50;
+    position: absolute;
+    height: 60%;
+    width: 40%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 0;
+    border-radius: 2rem;
+}
+
+.caixa_de_texto_novo_post {
+    background-color: #111E3E;
+    position: relative;
+    left: 10%;
+    top: 12.5%;
+    height: 70%;
+    width: 80%;
+    border-radius: 2rem;
+    color: white;
+}
+
+#post_text {
+    padding: 5%;
+    position: relative;
+    border-radius: 2rem;
+    background-color: #111E3E;
+    color: white;
+    width: 90%;
+    height: 85%;
+    border: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.botao_fechar_modal {
+    position: relative;
+    top: 20%;
+    left: 75%;
+    background-color: #222E50;
+    border: 0;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.botao_publicar_modal {
+    position: relative;
+    top: 20%;
+    left: 7.5%;
+    background-color: #222E50;
+    border: 0;
+    color: #8bc34a;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
 }
 
 .post {
@@ -121,6 +197,7 @@ button {
     border-radius: 2rem;
     margin-bottom: 2%;
     margin-left: 1%;
+    margin-top: 1rem;
 }
 
 .profile{

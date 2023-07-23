@@ -32,9 +32,20 @@
     <main class="feed">
         <div class="feed_area">
             <div class="feed_background">
-                <script src="/scripts/feed.js"></script>
             </div>
+            <div class="criar_post">
+                    <button class="botao_cria_post">Criar Post</button>
+            </div>
+            <dialog class="post_box">
+                <div class="caixa_de_texto_novo_post">
+                    <textarea id="post_text" maxlength="250" placeholder="Faça seu post..."></textarea>
+                </div>
+                <button class="botao_publicar_modal">Publicar</button>
+                <button class="botao_fechar_modal">Voltar</button>
+            </dialog>
         </div>
+        <script src="/scripts/feed.js"></script>
+    
     </main>
 </body>
 
