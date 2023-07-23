@@ -10,7 +10,7 @@ form.addEventListener('submit', evento => {
     fetch(`http://localhost:3000/user/${login}/${senha}`)
     .then(res => {
         if(!res.ok){
-            alert("Usuário inexistente")
+            alert("Usuário ou senha incorretos")
         }
         return res.json()
     })
@@ -19,7 +19,7 @@ form.addEventListener('submit', evento => {
             window.location.href = "feed.html"
         }
         if(data == false){
-            alert("Senha incorreta")
+            alert("Usuário ou senha incorretos")
         }
     })
 })

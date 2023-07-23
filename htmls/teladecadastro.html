@@ -33,7 +33,7 @@
             <div class="imagem_circulo_usuario_cadastro">
                 <img src="/imagens/circulo_usuario_cadastro.png" alt="circulo_usuario_cadastro" />
             </div>
-            <form>
+            <form id="form">
                 <div class="input_caixa">
                     <input type="text" name="nome" value="" placeholder="Nome" id="txt_nome"/>
                 </div>
@@ -54,7 +54,7 @@
                     <input type="password" name="senha" value="" placeholder="Senha" id="txt_senha"/>
                 </div>
                 <div class="cadastrar">
-                    <button id="botao_cadastrar">Cadastrar</button>
+                    <button type="submit" id="botao_cadastrar">Cadastrar</button>
                 </div>
                 <div class="tem_cadastro">
                     <label for="tem_cadastro" id="label_tem_cadastro">
@@ -62,8 +62,10 @@
                     </label>
                 </div>
             </form>
-       </div>   
-    </main>   
+            <script src="/scripts/cadastro.js"></script> 
+       </div>  
+    </main>
+       
 </body>
 </html>
 
