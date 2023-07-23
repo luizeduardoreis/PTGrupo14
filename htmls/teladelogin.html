@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/teladelogin.css">
-    <script src="/scripts/login.js"></script>
     <title>Login</title>
 </head>
 <body>
@@ -29,7 +28,7 @@
 
     </header>
     <main class="login">
-        <form method="post">
+        <form id="form">
             <div class="login_caixa">
                 <div class="imagem_circulo_usuario_login">
                     <img src="/imagens/circulo_usuario_login.png" alt="circulo_usuario_login" />
@@ -46,10 +45,11 @@
                     </a>
                 </div>
                 <div class="entrar_login">
-                    <input type="submit" id="botao_entrar_login" value="Entrar">
+                    <button type="submit" id="botao_entrar_login">Entrar</button>
                 </div>
             </div>
         </form>
+        <script src="/scripts/login.js"></script>
     </main>
 </body>
 </html>

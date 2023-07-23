@@ -30,7 +30,6 @@ rotas.post("/user", async (request, response) => {
 
 // READ
 rotas.get("/user/:login/:senha", async (request, response) => {
-    
     const {login, senha} = request.params;
     const userExiste = await prisma.user.findUnique({where: { username: login }});
     
@@ -42,8 +41,8 @@ rotas.get("/user/:login/:senha", async (request, response) => {
         return response.status(200).json(true);
     };
 
-    return response.status(200).json(false);
-    
+    return response.status(200).json(false); 
+     
 }); 
 
 // UPDATE
