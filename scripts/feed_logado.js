@@ -43,7 +43,7 @@ const mockedposts = [
     }
 ]
 
-const renderPosts = () => {
+function renderPosts() {
     const postContainer = document.querySelector('.feed_background')
 
     mockedposts.forEach(post => {
@@ -74,7 +74,19 @@ const renderPosts = () => {
     })
 }
 
+function renderUserName() {
+    const nameContainer = document.querySelector('.profile_name_navbar')
+
+    const username = document.createElement('label')
+
+    username.innerHTML = `
+        <label for="profile_name_navbar" id="profile_name_navbar">João</label>
+    `
+    nameContainer.appendChild(username)
+}
+
 renderPosts()
+
 // ... (previous code)
 
 // Instead of selecting only the first comment_balloon_button, select all of them
