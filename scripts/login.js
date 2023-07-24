@@ -17,7 +17,17 @@ form.addEventListener('submit', evento => {
     .then((data) => {
         if(data == true){
             window.location.href = "feed_logado.html"
-            renderPosts()
+            fetch(`http://localhost:3000/logado`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    "username": login
+                })
+            })
+            .then((res) => res.json())
+            .then((data) => console.log(data))
         }
         if(data == false){
             alert("Usuário ou senha incorretos")
