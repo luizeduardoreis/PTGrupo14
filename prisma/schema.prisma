@@ -24,15 +24,15 @@ model cargo {
 
 model post {
   id       Int  @id @default(autoincrement())
-  user_id String? @db.VarChar(50)
-  content    String? @db.VarChar(250)
+  user_id  String? @db.VarChar(50)
+  content  String? @db.VarChar(250)
 }
 
 model comments {
   id       Int  @id @default(autoincrement())
-  post_id String? @db.VarChar(50)
-  user_id    String? @db.VarChar(50)
-  content    String? @db.VarChar(250)
+  post_id  String? @db.VarChar(50)
+  user_id  String? @db.VarChar(50)
+  content  String? @db.VarChar(250)
 }
 
 model logado {

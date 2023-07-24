@@ -1,3 +1,7 @@
+const userLogado = fetch(`http://localhost:3000/logado`)
+                    .then((res) => res.json())
+                    .then((data) => console.log(data))
+
 const mockedposts = [
     {
         id: 1,
@@ -43,49 +47,52 @@ const mockedposts = [
     }
 ]
 
-function renderPosts() {
-    const postContainer = document.querySelector('.feed_background')
+function renderPosts(user) {
+  const postContainer = document.querySelector('.feed_background');
 
-    mockedposts.forEach(post => {
-        const postElement = document.createElement('div')
+  mockedposts.forEach((post) => {
+    const postElement = document.createElement('div');
 
-        postElement.innerHTML = `
-            <div class="post">
-                <div class="profile">
-                    <div class="profile_pic">
-                        <img class="profile_pic_image" src="/imagens/perfil.png" alt="foto_de_perfil">
-                    </div>
-                    <div class="profile_name">
-                        <label for="profile_name" id="profile_name">${post.author}</label>
-                        <label for="separador" id="separador">·</label>
-                        <label for="data" id="data">22 de jun</label>
-                    </div>
-                </div>
-                <div class="post_content">${post.content}</div>
-                <div class="comment_balloon">
-                    <button class="comment_balloon_button">
-                        <img src="/imagens/commentballoon.png" alt="comment_balloon">
-                    </button>
-                </div>
+    postElement.innerHTML = `
+    <div class="post">
+        <div class="profile">
+            <div class="profile_pic">
+                <img class="profile_pic_image" src="/imagens/perfil.png" alt="foto_de_perfil">
             </div>
-        `
-        postContainer.appendChild(postElement)
+            <div class="profile_name">
+                <label for="profile_name" id="profile_name">${post.author}</label>
+                <label for="separador" id="separador">·</label>
+                <label for="data" id="data">22 de jun</label>
+            </div>
+        </div>
+        <div class="post_content">${post.content}</div>
+        <div class="comment_balloon">
+            <button class="comment_balloon_button">
+                <img src="/imagens/commentballoon.png" alt="comment_balloon">
+            </button>
+        </div>
+    </div>
+`;
+    postContainer.appendChild(postElement);
+  });
 
-    })
+  const nameContainer = document.querySelector('.profile_name_navbar');
+  const username = document.createElement('label');
+  username.textContent = user; // Use the fetched user data
+  nameContainer.appendChild(username);
 }
 
-function renderUserName() {
-    const nameContainer = document.querySelector('.profile_name_navbar')
+fetch('http://localhost:3000/logado')
+  .then((res) => res.json())
+  .then((data) => {
+    const userLogado = data; // Save the fetched user data
+    console.log(userLogado); // Display fetched data in the console
+    renderPosts(userLogado); // Pass the fetched user data to renderPosts
+  })
+  .catch((error) => {
+    console.error('Error fetching user data:', error);
+  });
 
-    const username = document.createElement('label')
-
-    username.innerHTML = `
-        <label for="profile_name_navbar" id="profile_name_navbar">João</label>
-    `
-    nameContainer.appendChild(username)
-}
-
-renderPosts()
 
 // ... (previous code)
 

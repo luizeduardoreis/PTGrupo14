@@ -1,20 +1,24 @@
 import express from "express"
 import {PrismaClient} from "@prisma/client"
 
-const rotaLogado = express.Router()
+const rotas = express.Router()
 const prisma = new PrismaClient(); 
 
 // CREATE
-rotaLogado.post("/logado", async (request, response) => {
+rotas.post("/logado", async (request, response) => {
     const {user} = request.body;
-
-    const usuarioLogado = await prisma.logado.create({
+    const logado = await prisma.logado.create({
         data:{
-            username: user
-        },
+            username: user,
+        }
     });
-    return response.status(201).json(usuarioLogado)
 
+    return response.status(201).json(logado)
 });
 
-export default rotaLogado;
+rotas.get("/logado", async (request, response) => {
+    const usuario = await prisma.logado.findMany()
+    return response.status(200).json(usuario[0].username)
+});
+
+export default rotas;
