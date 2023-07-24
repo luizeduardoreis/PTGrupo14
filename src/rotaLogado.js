@@ -18,7 +18,7 @@ rotas.post("/logado", async (request, response) => {
 
 rotas.get("/logado", async (request, response) => {
     const usuario = await prisma.logado.findMany()
-    return response.status(200).json(usuario[0].username)
+    return response.status(200).json(usuario[usuario.length() - 1].username)
 });
 
 export default rotas;
