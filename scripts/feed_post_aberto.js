@@ -71,12 +71,4 @@ closeButton.addEventListener('click', () => {
     modal.close();
 });
 
-function updateCharCount() {
-    const textarea = document.getElementById('comment_text');
-    const charCountSpan = document.getElementById('char-count');
-    const maxChars = 250;
-    const remainingChars = maxChars - textarea.value.length;
-    
-    charCountSpan.textContent = `${remainingChars} ${remainingChars === 1 ? 'character' : 'characters'} left`;
-}
 
