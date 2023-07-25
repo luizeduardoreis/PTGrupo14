@@ -31,35 +31,34 @@ rotas.post("/user", async (request, response) => {
 // READ
 rotas.get("/user", async (request, response) => {
     const { login, userId } = request.query;
-
-    // If both login and userId are provided, return an error
+  
     if (login && userId) {
-        return response.status(400).json("Provide either 'login' or 'userId', not both.");
+      return response.status(400).json("Provide either 'login' or 'userId', not both.");
     }
-
-    // If the user_id is provided, search by ID; otherwise, search by login
+  
     let user;
     if (userId) {
-        user = await prisma.user.findUnique({ where: { id: parseInt(userId) } });
+      console.log("userId:", userId); // Log the value of userId to check if it's being parsed correctly
+      user = await prisma.user.findUnique({ where: { id: parseInt(userId) } });
     } else if (login) {
-        user = await prisma.user.findUnique({ where: { username: login } });
+      user = await prisma.user.findUnique({ where: { username: login } });
     } else {
-        return response.status(400).json("Provide 'login' or 'userId' to search for a user.");
+      return response.status(400).json("Provide 'login' or 'userId' to search for a user.");
     }
-
+  
     if (!user) {
-        return response.status(404).json("User inexistente");
+      return response.status(404).json("User inexistente");
     }
-
+  
     return response.status(200).json({
-        id: user.id,
-        username: user.username,
-        senha: user.senha,
-        cargo: user.cargo,
-        email: user.email
+      id: user.id,
+      username: user.username,
+      senha: user.senha,
+      cargo: user.cargo,
+      email: user.email
     });
-});
-
+  });
+  
 
 
 // UPDATE

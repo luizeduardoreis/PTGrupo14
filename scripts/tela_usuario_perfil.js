@@ -26,16 +26,16 @@ function renderPosts(mockedposts) {
     </div>
   `;
         postContainer.appendChild(postElement);
-		const postClick = document.getElementById(`post_${post.id}`);
-		postClick.addEventListener('click', (event) => {
+        const postClick = document.getElementById(`post_${post.id}`);
+        postClick.addEventListener('click', (event) => {
 
-			const postId = postClick.querySelector('#id_publicacao:last-child');
+            const postId = postClick.querySelector('#id_publicacao:last-child');
 
-			const postClickedEvent = new CustomEvent('postClicked', {
-				detail: { postId },
-			});
-			window.location.href = `feed_post_aberto_logado.html?post_id=${post.id}`
-		});
+            const postClickedEvent = new CustomEvent('postClicked', {
+                detail: { postId },
+            });
+            window.location.href = `feed_post_aberto_logado.html?post_id=${post.id}`
+        });
     });
 
     const commentBalloonButtons = document.querySelectorAll('.comment_balloon_button');
@@ -79,7 +79,7 @@ function renderUserProfile(user) {
 }
 
 async function fetchUserData() {
-    
+
     var userLogado;
 
     await fetch('http://localhost:3000/logado')
@@ -91,17 +91,24 @@ async function fetchUserData() {
         .catch((error) => {
             console.error('Error fetching user data:', error);
         });
-    await fetch(`http://localhost:3000/user/${userLogado[0].username}`)
-        .then((res) => res.json())
+    await fetch(`http://localhost:3000/user?userId=${userLogado[0].user_id}`)
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return res.json();
+        })
         .then((data) => {
-            userLogado = data;
-            console.log(userLogado.username);
-            renderUserProfile(userLogado)
+            console.log(data);
+            console.log(userLogado[0].user_id)
+            const user = data;
+            renderUserProfile(user);
         })
         .catch((error) => {
-            console.error('Error fetching user data:', error);
+            console.error("Error fetching user data:", error);
         });
-    await fetch(`http://localhost:3000/post?user_id=${userLogado.id}`)
+
+    await fetch(`http://localhost:3000/post?user_id=${userLogado[0].user_id}`)
         .then((res) => res.json())
         .then((data) => {
             const posts = data;
