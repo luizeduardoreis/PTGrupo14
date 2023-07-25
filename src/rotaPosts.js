@@ -5,6 +5,7 @@ import {PrismaClient} from "@prisma/client"
 const rotas = express.Router()
 const prisma = new PrismaClient(); 
 
+// CREATE
 rotas.post("/post", async (request, response) => {
     const today = new Date();
     const day = String(today.getDate()).padStart(2, '0');
@@ -27,6 +28,7 @@ rotas.post("/post", async (request, response) => {
 
 });
 
+// READ
 rotas.get("/post", async (request, response) => {
   const { user_id, post_id } = request.query;
 
@@ -45,6 +47,7 @@ rotas.get("/post", async (request, response) => {
   }
 });
 
+// DELETE
 rotas.delete("/post/:post_id", async (request, response) => {
   const { post_id } = request.params;
 

@@ -12,14 +12,15 @@ rotas.post("/comments", async (request, response) => {
     const year = today.getFullYear();
 
     const date =  `${day}/${month}/${year}`
-    const {commentContent, post_id, commentAuthor_id} = request.body;
+    const {commentContent, post_id, commentAuthor_id, commentAuthor} = request.body;
 
     const post = await prisma.comments.create({
         data: {
             post_id: post_id,
             user_id: commentAuthor_id,
             content: commentContent,
-            date: date
+            date: date,
+            author: commentAuthor
         }
     });
 

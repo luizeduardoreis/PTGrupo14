@@ -17,11 +17,13 @@ rotas.post("/logado", async (request, response) => {
     return response.status(201).json(logado)
 });
 
+// READ
 rotas.get("/logado", async (request, response) => {
     const usuario = await prisma.logado.findMany()
     return response.status(200).json(usuario)
 });
 
+// DELETE
 rotas.delete("/logado", async (request, response) => {
     try {
         const usuario = await prisma.logado.findMany();
@@ -42,11 +44,11 @@ rotas.delete("/logado", async (request, response) => {
         console.error('Error deleting data:', error);
         return response.status(500).json({ error: "Internal server error." });
     } finally {
-        // Don't forget to disconnect the Prisma client after the operation
         await prisma.$disconnect();
     }
 });
 
+// UPDATE
 rotas.put("/logado", async (request, response) => {
     const { user, id_user } = request.body;
 

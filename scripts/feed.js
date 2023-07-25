@@ -40,21 +40,16 @@ fetch('http://localhost:3000/post')
     console.error('Error fetching user data:', error);
   });
 
-// ... (previous code)
-
-// Instead of selecting only the first comment_balloon_button, select all of them
 const commentBalloonButtons = document.querySelectorAll('.comment_balloon_button');
 const modal = document.querySelector('.criar_comentario');
 const closeButton = document.querySelector('.botao_fechar_modal');
 
-// Add event listener to each comment_balloon_button
 commentBalloonButtons.forEach(openButton => {
     openButton.addEventListener('click', () => {
         modal.showModal();
     });
 });
 
-// Add event listener to the closeButton to close the modal
 closeButton.addEventListener('click', () => {
     modal.close();
 });

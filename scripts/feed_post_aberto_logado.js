@@ -20,7 +20,7 @@ async function renderComments(mockedcomments) {
                     <div class="profile_name">
                         <label for="profile_name" id="profile_name">${comment.author}</label>
                         <label for="separador" id="separador">·</label>
-                        <label for="data" id="data">22 de jun</label>
+                        <label for="data" id="data">${comment.date}</label>
                     </div>
                 </div>
                 <div class="post_text">${comment.content}</div>
@@ -46,6 +46,22 @@ function renderUsername(user) {
     const username = document.createElement('label');
     username.textContent = user[0].username; // Use the fetched user data
     nameContainer.appendChild(username);
+
+    const botaoSair = document.querySelector('.botao_sair');
+	botaoSair.addEventListener('click', async () => {
+		await fetch(`http://localhost:3000/logado`, {
+			method: 'DELETE',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				"user": "any"
+			})
+		})
+			.then((res) => res.json())
+			.then((data) => console.log(data))
+		window.location.href = 'feed.html'
+	})
 }
 
 async function renderPostContent() {
@@ -147,7 +163,8 @@ function prepareComment(user) {
             body: JSON.stringify({
                 "post_id": parseInt(postId),
                 "commentAuthor_id": user[0].user_id,
-                "commentContent": commentContent
+                "commentContent": commentContent,
+                "commentAuthor": user[0].username
             })
         })
             .then((res) => res.json())

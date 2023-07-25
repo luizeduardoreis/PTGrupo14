@@ -91,6 +91,7 @@ async function fetchUserData() {
         .catch((error) => {
             console.error('Error fetching user data:', error);
         });
+        
     await fetch(`http://localhost:3000/user?userId=${userLogado[0].user_id}`)
         .then((res) => {
             if (!res.ok) {
