@@ -29,21 +29,38 @@ rotas.post("/user", async (request, response) => {
 });
 
 // READ
-rotas.get("/user/:login/:senha", async (request, response) => {
-    const {login, senha} = request.params;
-    const userExiste = await prisma.user.findUnique({where: { username: login }});
-    
-    if(!userExiste){ // caso user nao exista
+rotas.get("/user", async (request, response) => {
+    const { login, userId } = request.query;
+
+    // If both login and userId are provided, return an error
+    if (login && userId) {
+        return response.status(400).json("Provide either 'login' or 'userId', not both.");
+    }
+
+    // If the user_id is provided, search by ID; otherwise, search by login
+    let user;
+    if (userId) {
+        user = await prisma.user.findUnique({ where: { id: parseInt(userId) } });
+    } else if (login) {
+        user = await prisma.user.findUnique({ where: { username: login } });
+    } else {
+        return response.status(400).json("Provide 'login' or 'userId' to search for a user.");
+    }
+
+    if (!user) {
         return response.status(404).json("User inexistente");
     }
 
-    if (userExiste.senha == senha){ // caso user não exista
-        return response.status(200).json(true);
-    };
+    return response.status(200).json({
+        id: user.id,
+        username: user.username,
+        senha: user.senha,
+        cargo: user.cargo,
+        email: user.email
+    });
+});
 
-    return response.status(200).json(false); 
-     
-}); 
+
 
 // UPDATE
 rotas.put("/user", async (request, response) => {

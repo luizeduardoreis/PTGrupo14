@@ -1,49 +1,4 @@
-const mockedposts = [
-    {
-        id: 1,
-        title: 'Post 1',
-        content: 'Suárez deixou claro ao Grêmio o desejo de sair e ficou descontente com a postura do clube, que não abre mão de mantê-lo. O uruguaio sofre com as dores no joelho. Há também o interesse do Inter Miami, que faria a reedição da dupla com Messi.',
-        author: 'José'
-    },
-    {
-        id: 2,
-        title: 'Post 2',
-        content: 'Eu sou a Maria!',
-        author: 'Maria'
-    },
-    {
-        id: 3,
-        title: 'Post 3',
-        content: 'Sou o João!',
-        author: 'João'
-    },
-    {
-        id: 3,
-        title: 'Post 3',
-        content: 'Sou o João!',
-        author: 'João'
-    },
-    {
-        id: 3,
-        title: 'Post 3',
-        content: 'Sou o João!',
-        author: 'João'
-    },
-    {
-        id: 3,
-        title: 'Post 3',
-        content: 'Sou o João!',
-        author: 'João'
-    },
-    {
-        id: 3,
-        title: 'Post 3',
-        content: 'Sou o João!',
-        author: 'João'
-    }
-]
-
-const renderPosts = () => {
+const renderPosts = (mockedposts) => {
     const postContainer = document.querySelector('.feed_background')
 
     mockedposts.forEach(post => {
@@ -58,7 +13,7 @@ const renderPosts = () => {
                     <div class="profile_name">
                         <label for="profile_name" id="profile_name">${post.author}</label>
                         <label for="separador" id="separador">·</label>
-                        <label for="data" id="data">22 de jun</label>
+                        <label for="data" id="data">${post.date}</label>
                     </div>
                 </div>
                 <div class="post_content">${post.content}</div>
@@ -74,7 +29,16 @@ const renderPosts = () => {
     })
 }
 
-renderPosts()
+fetch('http://localhost:3000/post')
+  .then((res) => res.json())
+  .then((data) => {
+    const posts = data;
+    console.log(posts);
+    renderPosts(posts);
+  })
+  .catch((error) => {
+    console.error('Error fetching user data:', error);
+  });
 
 // ... (previous code)
 
@@ -94,3 +58,16 @@ commentBalloonButtons.forEach(openButton => {
 closeButton.addEventListener('click', () => {
     modal.close();
 });
+
+fetch('http://localhost:3000/logado')
+	.then((res) => res.json())
+	.then((data) => {
+		const userLogado = data;
+		console.log(userLogado);
+		if (userLogado.length > 0) {
+            window.location.href = 'feed_logado.html'
+        }
+	})
+	.catch((error) => {
+		console.error('Error fetching user data:', error);
+	});

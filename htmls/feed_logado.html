@@ -22,7 +22,11 @@
             <div class="profile_name_navbar">
             </div>
             <div class="profile_pic_navbar">
-                <img class="profile_pic_image_navbar" src="/imagens/perfil.png" alt="foto_de_perfil">
+                <a href="tela_usuario_perfil.html">
+                    <button class="botao_ir_para_perfil">
+                        <img class="profile_pic_image_navbar" src="/imagens/perfil.png" alt="foto_de_perfil">
+                    </button>
+                </a>
             </div>
         </div>
         <div class="sair">
@@ -36,9 +40,6 @@
             <dialog class="criar_comentario">
                 <div class="caixa_de_texto_novo_comentario">
                     <div class="options">
-                        <button class="botao_dialog" id="add_imagem">
-                            <img src="/imagens/Vector.png" alt="logo_cjr">
-                        </button>
                         <button class="botao_dialog" id="negrito">
                             <img src="/imagens/bold.png" alt="logo_cjr">
                         </button>
@@ -46,12 +47,28 @@
                             <img src="/imagens/italic.png" alt="logo_cjr">
                         </button>
                     </div>
-                    <textarea id="comment_text" maxlength="250" placeholder="Escreva seu comentário..."></textarea>
-                    <button class="botao_publicar_modal">Publicar</button>
-                    <button class="botao_fechar_modal">Voltar</button>
+                    <textarea id="texto_novo_comentario" maxlength="250" placeholder="Escreva seu comentário..."></textarea>
+                    <button class="botao_publicar_modal" id="botao_postar_novo_comentario">Publicar</button>
+                    <button class="botao_fechar_modal"  id="botao_fechar_modal_novo_comentario">Voltar</button>
+                </div>
+            </dialog>
+            <dialog class="criar_publicacao">
+                <div class="caixa_de_texto_novo_comentario">
+                    <div class="options">
+                        <button class="botao_dialog" id="negrito">
+                            <img src="/imagens/bold.png" alt="logo_cjr">
+                        </button>
+                        <button class="botao_dialog" id="italico">
+                            <img src="/imagens/italic.png" alt="logo_cjr">
+                        </button>
+                    </div>
+                    <textarea id="texto_nova_publicacao" maxlength="250" placeholder="Chora"></textarea>
+                    <button class="botao_publicar_modal" id="botao_postar_nova_publicacao">Publicar</button>
+                    <button class="botao_fechar_modal" id="botao_fechar_modal_nova_publicacao">Voltar</button>
                 </div>
             </dialog>
             <div class="feed_background">
+                <button class="nova_publicacao_button">Nova Publicação</button>
             </div>
         </div>
     </main>

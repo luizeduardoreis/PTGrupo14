@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/tela_usuario_perfil.css">
+    <link rel="stylesheet" href="/css/feed_post_aberto_logado.css">
     <title>Feed</title>
 </head>
 <body>
@@ -21,9 +20,11 @@
             <div class="profile_name_navbar">
             </div>
             <div class="profile_pic_navbar">
-                <button class="botao_ir_para_perfil">
-                    <img class="profile_pic_image_navbar" src="/imagens/perfil.png" alt="foto_de_perfil">
-                </button>
+                <a href="tela_usuario_perfil.html">
+                    <button class="botao_ir_para_perfil">
+                        <img class="profile_pic_image_navbar" src="/imagens/perfil.png" alt="foto_de_perfil">
+                    </button>
+                </a>
             </div>
         </div>
         <div class="sair">
@@ -32,15 +33,11 @@
             </button>
         </div>
     </header>
-
-    <main>
-        <div class="banner">
-            <div class="banner_area">
-            </div>
-        </div>
-
-        <div class="feed">
-            <div class="feed_area">
+    <main class="feed">
+        <div class="feed_area">
+                <div class="post_aberto">
+                    <div class="comments"></div>`
+                </div>
                 <dialog class="criar_comentario">
                     <div class="caixa_de_texto_novo_comentario">
                         <div class="options">
@@ -56,27 +53,14 @@
                         <button class="botao_fechar_modal"  id="botao_fechar_modal_novo_comentario">Voltar</button>
                     </div>
                 </dialog>
-                <div class="up_feed">
-                    <div class="editar_perfil">
-                        <a href="tela_editar_perfil.html">
-                            <button class="botao_editar_perfil">Editar Perfil</button>
-                        </a>
+                <div class="feed_rodape_comentar">
+                    <div class="comentar">
+                        <button class="botao_comentar">Comentar</button>
                     </div>
-                    <div class="foto_perfil">
-                        <img class="foto_perfil_grande" src="/imagens/perfil_grande.png" alt="foto_perfil_grande">
-                    </div>
-                    <div class="bio"></div>
-                </div>
-                <div class="feed_background">
-                    <div class="publicacoes">
-                        <label for="publicacoes" id="publicacoes_txt">Publicações</label>
-                    </div>
-                </div>
-
                 </div>
             </div>
         </div>
+        <script src="/scripts/feed_post_aberto_logado.js"></script>
     </main>
-    <script src="/scripts/tela_usuario_perfil.js"></script>
 </body>
 </html>

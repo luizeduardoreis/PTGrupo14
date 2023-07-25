@@ -52,10 +52,18 @@
                 </div>
                 <dialog class="criar_comentario">
                     <div class="caixa_de_texto_novo_comentario">
-                        <textarea id="comment_text" maxlength="250" placeholder="Escreva seu comentário..."></textarea>
+                        <div class="options">
+                            <button class="botao_dialog" id="negrito">
+                                <img src="/imagens/bold.png" alt="logo_cjr">
+                            </button>
+                            <button class="botao_dialog" id="italico">
+                                <img src="/imagens/italic.png" alt="logo_cjr">
+                            </button>
+                        </div>
+                        <textarea id="texto_novo_comentario" maxlength="250" placeholder="Escreva seu comentário..."></textarea>
+                        <button class="botao_publicar_modal" id="botao_postar_novo_comentario">Publicar</button>
+                        <button class="botao_fechar_modal"  id="botao_fechar_modal_novo_comentario">Voltar</button>
                     </div>
-                    <button class="botao_publicar_modal">Publicar</button>
-                    <button class="botao_fechar_modal">Voltar</button>
                 </dialog>
                 <div class="feed_rodape_comentar">
                     <div class="comentar">

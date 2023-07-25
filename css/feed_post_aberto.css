@@ -189,7 +189,7 @@ button {
 .criar_comentario {
     background-color: #222E50;
     position: absolute;
-    height: 60%;
+    height: 55%;
     width: 40%;
     left: 50%;
     top: 50%;
@@ -198,11 +198,27 @@ button {
     border-radius: 2rem;
 }
 
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao_dialog {
+    background-color: #111E3E;
+    border: 0;
+    margin-top: 5%;
+    margin-right: 10%;
+    margin-left: 10%;
+    width: 36px;
+    height: 36px;
+}
+
 .caixa_de_texto_novo_comentario {
     background-color: #111E3E;
     position: relative;
     left: 10%;
-    top: 12.5%;
+    top: 10%;
     height: 70%;
     width: 80%;
     border-radius: 2rem;
@@ -212,7 +228,7 @@ button {
 .botao_fechar_modal {
     position: relative;
     top: 20%;
-    left: 75%;
+    left: 7.5%;
     background-color: #222E50;
     border: 0;
     color: white;
@@ -224,7 +240,7 @@ button {
 .botao_publicar_modal {
     position: relative;
     top: 20%;
-    left: 7.5%;
+    left: 75%;
     background-color: #222E50;
     border: 0;
     color: #8bc34a;
@@ -233,19 +249,19 @@ button {
     font-weight: 700;
 }
 
-#comment_text {
+#texto_novo_comentario {
     padding: 5%;
     position: relative;
     border-radius: 2rem;
     background-color: #111E3E;
     color: white;
+    top: 10%;
     width: 90%;
-    height: 85%;
+    height: 55%;
     border: 0;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
 }
-
 
 .profile_pic {
     position: relative;
